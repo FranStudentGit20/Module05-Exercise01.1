@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Module05_Exercise01.Model
 {
-    internal class Employee
+    public class Employee
     {
         public int EmployeeID { get; set; }
 
@@ -14,7 +14,7 @@ namespace Module05_Exercise01.Model
 
         public string Address { get; set; }
 
-        public string Email { get; set; }
+        public string email { get; set; }
 
         public string ContactNo { get; set; }
     }

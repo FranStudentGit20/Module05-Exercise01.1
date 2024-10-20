@@ -57,14 +57,14 @@ namespace Module05_Exercise01.ViewModel
         {
             if (IsBusy) return;
             IsBusy = true;
-            StatusMessage = "Loading personal data...";
+            StatusMessage = "Loading employee data...";
             try
             {
-                var personals = await _employeeService.GetPersonalsAsync();
+                var employees = await _employeeService.GetEmployeesAsync();
                 EmployeeList.Clear();
-                foreach (var personal in personals)
+                foreach (var employee in employees)
                 {
-                    EmployeeList.Add(personal);
+                    EmployeeList.Add(employee);
                 }
                 StatusMessage = "Data loaded successfully";
             }

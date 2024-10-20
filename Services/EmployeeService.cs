@@ -19,32 +19,32 @@ namespace Module05_Exercise01.Services
             _connectionString = dbService.GetConnectionString();
         }
 
-        public async Task<List<Employee>> GetPersonalsAsync()
+        public async Task<List<Employee>> GetEmployeesAsync()
         {
-            var personalService = new List<Employee>();
+            var employeeService = new List<Employee>();
             using (var conn = new MySqlConnection(_connectionString))
             {
                 await conn.OpenAsync();
 
                 //Retrieve Data
-                var cmd = new MySqlCommand("SELECT * FROM companydb", conn);
+                var cmd = new MySqlCommand("SELECT * FROM CompanyDB", conn);
 
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
                     while (await reader.ReadAsync())
                     {
-                        personalService.Add(new Employee
+                        employeeService.Add(new Employee
                         {
-                            EmployeeID = reader.GetInt32("ID"),
+                            EmployeeID = reader.GetInt32("EmployeeID"),
                             Name = reader.GetString("Name"),
                             Address = reader.GetString("Address"),
-                            Email = reader.GetString("email"),
+                            email = reader.GetString("email"),
                             ContactNo = reader.GetString("ContactNo"),
                         });
                     }
                 }
             }
-            return personalService;
+            return employeeService;
         }
     }
 }

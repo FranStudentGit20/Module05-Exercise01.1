@@ -4,14 +4,23 @@
              x:Class="Module05_Exercise01.View.ViewEmployee"
              Title="ViewEmployee">
     <VerticalStackLayout>
-        <Label Text="Personal Information"
+        <Label Text="Employee Information"
    FontSize="20"
    HorizontalOptions="Center"/>
         <ListView ItemsSource="{Binding EmployeeList}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" 
-                      Detail="{Binding Gender}"/>
+                    <ViewCell>
+                        <Frame HasShadow="False" BackgroundColor="#E1F5FE" Padding="10" Margin="5">
+                            <StackLayout>
+                                <Label Text="{Binding EmployeeID}" TextColor="#01579B" FontAttributes="Bold"/>
+                                <Label Text="{Binding Name}" TextColor="#0288D1"/>
+                                <Label Text="{Binding Address}" TextColor="#0288D1"/>
+                                <Label Text="{Binding email}" TextColor="#0288D1"/>
+                                <Label Text="{Binding ContactNo}" TextColor="#0288D1"/>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
