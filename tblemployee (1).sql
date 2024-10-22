@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2024 at 03:07 AM
+-- Generation Time: Oct 20, 2024 at 12:54 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -31,7 +31,7 @@ CREATE TABLE `tblemployee` (
   `EmployeeID` int(11) NOT NULL,
   `Name` varchar(100) DEFAULT NULL,
   `Address` varchar(100) DEFAULT NULL,
-  `Email` varchar(100) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
   `ContactNo` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -39,7 +39,7 @@ CREATE TABLE `tblemployee` (
 -- Dumping data for table `tblemployee`
 --
 
-INSERT INTO `tblemployee` (`EmployeeID`, `Name`, `Address`, `Email`, `ContactNo`) VALUES
+INSERT INTO `tblemployee` (`EmployeeID`, `Name`, `Address`, `email`, `ContactNo`) VALUES
 (1, 'John Stewart', '182 Avenue Street', 'stewart.john@gmail.com', '01922832938'),
 (2, 'Sarah Johnson', '12 street New York', 'johnson.sarah@gmail.com', '02183829012');
 
