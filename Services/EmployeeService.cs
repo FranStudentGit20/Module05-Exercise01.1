@@ -27,7 +27,7 @@ namespace Module05_Exercise01.Services
                 await conn.OpenAsync();
 
                 //Retrieve Data
-                var cmd = new MySqlCommand("SELECT * FROM CompanyDB", conn);
+                var cmd = new MySqlCommand("SELECT * FROM tblemployee", conn);
 
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
